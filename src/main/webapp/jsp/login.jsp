@@ -14,7 +14,7 @@
         <div class="container-1-1">
          <form action="../LoginController?ruta=login" method="POST" class="form">
              <fieldset>
-                 <legend>Bienvenido :D!</legend><br>
+                 <legend>Welcome :)</legend><br>
                  <p>Inicia sesión con tu cuenta</p> <br><br>
                  <input type="text" name="user" class="input"  autocomplete="off" placeholder="Usuario" required/>
                  <br><br>

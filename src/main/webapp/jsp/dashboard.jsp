@@ -13,7 +13,7 @@
 <body class="body">
 
 	<header class="container-header">
-		<h1>Chaucherita Finance</h1>
+		<h1>PERSONAL FINANCE</h1>
 		<a class="icon" href="LoginController?ruta=salir"> <i
 			class="fa-solid fa-right-from-bracket fa-2x"></i>
 		</a>

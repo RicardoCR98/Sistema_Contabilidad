@@ -28,12 +28,50 @@ El archivo `pom.xml` contiene las siguientes dependencias importantes (no hace f
 - **jersey-media-json-jackson**: Soporte de Jackson para Jersey y la conversión de JSON.
 
 ## Requisitos
-Java 11 o superior: Asegúrate de tener instalada la versión 11 o superior de Java.
-Apache Tomcat 9.x: Para el despliegue del archivo WAR.
+- **Java 11 o superior:** Asegúrate de tener instalada la versión 11 o superior de Java.
+- **Apache Tomcat 9.x:** Para el despliegue del archivo WAR.
 
 ## Configuración de Base de Datos
 La configuración de la base de datos para Hibernate está en el archivo persistence.xml, ubicado en la carpeta resources/META-INF/. 
 Asegúrate de que la base de datos MySQL esté correctamente configurada con las credenciales y los parámetros adecuados.
 
+## Pasos para ejecutar
+- Primero ejecutar el archivo `testJPA` que se encuentra en `/src/main/java/modelo/jpa/testJPA` dado que en 
+ese archivo se encuentra la ejecución de la base da datos
+- Luego ejecutar con tomcat 9.x para que inicie la aplicación web
 ## Contribuir
 Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio, crea una rama con tus cambios, y envía un pull request.
+
+## Capturas de pantalla de la aplicación
+La aplicación se desplega en el navegador e ingresamos con las credenciales, que para el ejemplo es
+- Username: `Admin`
+- Password: `Admin123`
+
+![Login](/Images/Login.png)
+
+Se nos presenta la interfaz del dashboard con todas las funcionalidades de la mismas.
+
+![Dashboard](/Images/Dashboard.png)
+
+Entre las funciones encontramos `Income` donde se nos presenta un pop up
+
+![Income](/Images/Income.png)
+
+Al dar en save, el dashboard se actualiza:
+![Dashboard_income](/Images/Dashboard_Income.png)
+
+Otra funcionalidad es `Expense` donde se nos presenta un pop up
+
+![Expense](/Images/Expense.png)
+
+Al dar en save, el dashboard se actualiza:
+
+![img.png](Images/Dashboard_Expense.png)
+
+Otra funcionalidad es `Transfer` donde se nos presenta un pop up
+
+![Transfer](/Images/Transfer.png)
+
+Al dar en save, el dashboard se actualiza:
+
+![Dashboard_Transfer](Images/Dashboard_Transfer.png)

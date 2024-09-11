@@ -28,7 +28,7 @@ public class Cuenta implements Serializable {
 	@Column(name = "saldo")
 	private double saldo;
 	@ManyToOne(cascade = CascadeType.REFRESH)
-	@JoinColumn(name = "usuario")
+	@JoinColumn(name = "usuario_id")
 	private Usuario usuario;
 
 	public Cuenta() {
