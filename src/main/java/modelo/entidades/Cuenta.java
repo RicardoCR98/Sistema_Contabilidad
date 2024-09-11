@@ -20,6 +20,7 @@ public class Cuenta implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idCuenta")
 	private Integer idCuenta;
 	@Column(name = "nombre")
 	private String nombre;

@@ -72,12 +72,26 @@ btnCerrarPopup3.addEventListener('click', function(e) {
 	popup3.classList.remove('active');
 });
 
-const inputField = document.getElementById('importe1');
-inputField.addEventListener('input', addMinusSign);
+// Campo de Ingreso (Income)
+const incomeField = document.getElementById('importe1');
+incomeField.addEventListener('input', ensurePositiveSign);
+
+function ensurePositiveSign() {
+	const currentValue = incomeField.value;
+	// Si el valor es negativo o tiene un signo negativo al principio, remuévelo
+	if (currentValue.startsWith('-')) {
+		incomeField.value = currentValue.substring(1);
+	}
+}
+
+// Campo de Gasto (Expense)
+const expenseField = document.getElementById('importe2');
+expenseField.addEventListener('input', addMinusSign);
 
 function addMinusSign() {
-	const currentValue = inputField.value;
-	if (!currentValue.startsWith('-')) {
-		inputField.value = '-' + currentValue;
+	const currentValue = expenseField.value;
+	// Si el valor no empieza con "-", agrégalo
+	if (!currentValue.startsWith('-') && currentValue !== '') {
+		expenseField.value = '-' + currentValue;
 	}
 }

@@ -21,6 +21,7 @@ public class Movimiento implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "idMovimiento")
 	private Integer idMovimiento;
 	@Column(name = "valor")
 	private double valor;

@@ -68,9 +68,9 @@ public class GestorMovimientoController extends HttpServlet {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiChaucherita");
 		EntityManager em = emf.createEntityManager();
 
-		Double amount = Double.parseDouble(request.getParameter("importe"));
+		Double amount = Double.parseDouble(request.getParameter("importe1"));
 
-		String fechaValue = request.getParameter("fecha");
+		String fechaValue = request.getParameter("fecha2");
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //
 //		Date fecha = null;
@@ -91,7 +91,7 @@ public class GestorMovimientoController extends HttpServlet {
 		}
 		Categoria incomeCategory = DAOFactory.getFactory().getCategoriaDAO().getById(x);
 
-		String accountIncome = request.getParameter("cuenta");
+		String accountIncome = request.getParameter("cuenta1");
 
 		List<Cuenta> accounts = DAOFactory.getFactory().getCuentaDAO().getAll();
 		int y = 0;
@@ -102,7 +102,7 @@ public class GestorMovimientoController extends HttpServlet {
 		}
 		Cuenta account = DAOFactory.getFactory().getCuentaDAO().getById(y);
 
-		String description = request.getParameter("concepto");
+		String description = request.getParameter("concepto1");
 
 		Movimiento mov = new Movimiento();
 		mov.setValor(amount);
@@ -143,9 +143,9 @@ public class GestorMovimientoController extends HttpServlet {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiChaucherita");
 		EntityManager em = emf.createEntityManager();
 
-		Double amount = Double.parseDouble(request.getParameter("importe"));
+		Double amount = Double.parseDouble(request.getParameter("importe2"));
 
-		String fechaValue = request.getParameter("fecha");
+		String fechaValue = request.getParameter("fecha3");
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //
 //		Date fecha = null;
@@ -166,7 +166,7 @@ public class GestorMovimientoController extends HttpServlet {
 		}
 		Categoria expenseCategory = DAOFactory.getFactory().getCategoriaDAO().getById(x);
 
-		String accountExpense = request.getParameter("cuenta");
+		String accountExpense = request.getParameter("cuenta2");
 
 		List<Cuenta> accounts = DAOFactory.getFactory().getCuentaDAO().getAll();
 		int y = 0;
@@ -177,7 +177,7 @@ public class GestorMovimientoController extends HttpServlet {
 		}
 		Cuenta account = DAOFactory.getFactory().getCuentaDAO().getById(y);
 
-		String description = request.getParameter("concepto");
+		String description = request.getParameter("concepto2");
 
 		Movimiento mov = new Movimiento();
 		mov.setValor(amount);
@@ -215,9 +215,9 @@ public class GestorMovimientoController extends HttpServlet {
 	private void transfer(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("MiChaucherita");
 		EntityManager em = emf.createEntityManager();
-		Double amount = Double.parseDouble(request.getParameter("importe"));
+		Double amount = Double.parseDouble(request.getParameter("importe3"));
 
-		String fechaValue = request.getParameter("fecha");
+		String fechaValue = request.getParameter("fecha4");
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //
 //		Date fecha = null;

@@ -36,35 +36,20 @@ La configuración de la base de datos para Hibernate está en el archivo persist
 Asegúrate de que la base de datos MySQL esté correctamente configurada con las credenciales y los parámetros adecuados.
 
 ## Pasos para ejecutar la base de datos
-- Primero ejecutar el archivo `testJPA` que se encuentra en `/src/main/java/modelo/jpa/testJPA` dado que en 
-ese archivo se encuentra la ejecución de la base da datos
-- Luego ejecutar con tomcat 9.x para que inicie la aplicación web
+
+- Primero, asegurese de crear solo la base de datos  `create database michaucheritadb`, las tablas se crearan posteriormente.
+- Luego, asegurarse que en el archivo persistence la etiqueta property esté con un valor
+de `update` así como se muestra aconinuación: `<property name="hibernate.hbm2ddl.auto" value="update" />`.
+- Posterior a eso ejecutar el archivo `testJPA` que se encuentra en `/src/main/java/modelo/jpa/testJPA` dado que en 
+ese archivo se encuentra la ejecución de la base da datos.
+- Finalmente, ejecutar con tomcat 9.x para que inicie la aplicación web.
 
 Si no quieren seguir esos pasos pueden ejecutar el script de la base de datos:
 
 ```sql
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 11-09-2024 a las 07:28:15
--- Versión del servidor: 10.4.32-MariaDB
--- Versión de PHP: 8.2.12
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `michaucheritadb`
---
 
 -- --------------------------------------------------------
 

@@ -75,7 +75,7 @@
 					<p style="font-weight: bold; font-size: 20px;">My Wallet</p>
 					<form action="GestorDashboardController?ruta=filterMoney" method="POST">
 						<div class="col">
-							<input type="month" name="fecha" id="fecha" class="calendario"
+							<input type="month" name="fecha1" id="fecha1" class="calendario"
 								value="2023-08" onchange="this.form.submit()">
 						</div>
 					</form>
@@ -156,7 +156,8 @@
 							<td>${movi.idMovimiento}</td>
 							<td
 								style="color: ${movi.tipoMovimiento == 'EGRESO' ? 'red' : (movi.tipoMovimiento == 'TRANSFERENCIA' ? 'blue' : 'green')}">
-								${movi.tipoMovimiento == 'INGRESO' ? '+' : ''}$${movi.valor}</td>
+								${movi.tipoMovimiento == 'INGRESO' ? '+' : ''}$${movi.valor}
+							</td>
 							<td>${movi.descripcion}</td>
 							<td>${movi.fecha}</td>
 							<td>${movi.tipoMovimiento}</td>
@@ -183,15 +184,16 @@
 				method="POST">
 
 				<div class="form-row">
-					<label for="importe">Amount</label> <input type="number"
-						id="importe" name="importe" placeholder="$10"
+					<label for="importe1">Amount</label> <input type="number"
+						id="importe1" name="importe1" placeholder="$10"
 						style="color: green; font-weight: bold;" required>
 				</div>
 
 
+
 				<div class="form-row">
-					<label for="fecha">Date</label> <input type="date" value="clear"
-						name="fecha" id="fecha" required />
+					<label for="fecha2">Date</label> <input type="date" value="clear"
+						name="fecha2" id="fecha2" required />
 				</div>
 
 				<div class="form-row">
@@ -205,7 +207,7 @@
 				</div>
 
 				<div class="form-row">
-					<label for="cuenta">Account</label> <select id="tipo" name="cuenta"
+					<label for="cuenta1">Account</label> <select id="cuenta1" name="cuenta1"
 						class="short" required>
 						<option value="select" selected>select</option>
 						<c:forEach items="${accounts}" var="account" varStatus="status">
@@ -217,8 +219,8 @@
 				</div>
 
 				<div class="form-row">
-					<label for="concepto">Description</label> <input type="text"
-						id="concepto" name="concepto" placeholder="Concepto">
+					<label for="concepto1">Description</label> <input type="text"
+						id="concepto1" name="concepto1" placeholder="Concepto">
 				</div>
 
 				<div class="form-row">
@@ -269,14 +271,14 @@
 				method="POST">
 
 				<div class="form-row">
-					<label for="importe">Amount</label> <input type="number"
-						id="importe1" name="importe" placeholder="- $10"
+					<label for="importe2">Amount</label> <input type="number"
+						id="importe2" name="importe2" placeholder="- $10"
 						style="color: red; font-weight: bold;" required>
 				</div>
 
 				<div class="form-row">
-					<label for="fecha">Date</label> <input type="date" value="clear"
-						name="fecha" id="fecha" required />
+					<label for="fecha3">Date</label> <input type="date" value="clear"
+						name="fecha3" id="fecha3" required />
 				</div>
 
 
@@ -291,7 +293,7 @@
 					</select>
 				</div>
 				<div class="form-row">
-					<label for="cuenta">Account</label> <select id="tipo" name="cuenta"
+					<label for="cuenta2">Account</label> <select id="cuenta2" name="cuenta2"
 						class="short" required>
 						<option value="select" selected>select</option>
 						<c:forEach items="${accounts}" var="account" varStatus="status">
@@ -303,8 +305,8 @@
 				</div>
 
 				<div class="form-row">
-					<label for="concepto">Description</label> <input type="text"
-						id="concepto" name="concepto" placeholder="Concepto">
+					<label for="concepto2">Description</label> <input type="text"
+						id="concepto2" name="concepto2" placeholder="Concepto">
 				</div>
 
 				<div class="form-row">
@@ -325,18 +327,18 @@
 				class="form-3" method="POST">
 
 				<div class="form-row">
-					<label for="importe">Amount</label> <input type="number"
-						id="importe" name="importe" placeholder="$10"
+					<label for="importe3">Amount</label> <input type="number"
+						id="importe3" name="importe3" placeholder="$10"
 						style="color: blue; font-weight: bold;" required>
 				</div>
 
 				<div class="form-row">
-					<label for="fecha">Date</label> <input type="date" value="clear"
-						name="fecha" id="fecha" required />
+					<label for="fecha4">Date</label> <input type="date" value="clear"
+						name="fecha4" id="fecha4" required />
 				</div>
 
 				<div class="form-row">
-					<label for="categoria">Source account</label> <select
+					<label for="cuentaOrigen">Source account</label> <select
 						id="cuentaOrigen" name="cuentaOrigen" class="short" required>
 						<option value="select" selected>select</option>
 						<c:forEach items="${accounts}" var="account" varStatus="status">
@@ -348,7 +350,7 @@
 				</div>
 
 				<div class="form-row">
-					<label for="categoria">Destination account</label> <select
+					<label for="cuentaDestino">Destination account</label> <select
 						id="cuentaDestino" name="cuentaDestino" class="short" required>
 						<option value="select" selected>select</option>
 						<c:forEach items="${accounts}" var="account" varStatus="status">
@@ -359,7 +361,7 @@
 					</select>
 				</div>
 				<div class="form-row" style="display: none;">
-					<label for="categoria">Category</label> <select
+					<label for="transfer-category">Category</label> <select
 						id="transfer-category" name="transfer-category" class="short">
 						<c:forEach items="${transferCategoryNames}" var="transfer">
 							<option value="${transfer}">${transfer}</option>
@@ -368,8 +370,8 @@
 				</div>
 
 				<div class="form-row" style="display: none;">
-					<label for="concepto">Description</label>
-					<textarea id="concepto" name="concepto" placeholder="Nota"
+					<label for="concepto3">Description</label>
+					<textarea id="concepto3" name="concepto3" placeholder="Nota"
 						style="resize: none; border-radius: 15px; padding: 10px; border: 1px solid #ccc;"></textarea>
 				</div>
 
