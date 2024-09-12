@@ -8,7 +8,6 @@ Este proyecto es una aplicación web desarrollada en **Java Servlet** y **Hibern
 - **MySQL**: Base de datos utilizada
 - **JSTL**: JavaServer Pages Standard Tag Library
 - **Jersey**: Para servicios REST
-- **JAXB**: Para manipulación de XML y JSON
 - **JSP**: JavaServer Pages para la vista
 - **HTML/CSS/JS**: Para la interfaz de usuario
 
